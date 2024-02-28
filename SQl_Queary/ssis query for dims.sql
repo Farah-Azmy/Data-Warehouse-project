@@ -52,7 +52,8 @@ LEFT JOIN address_status ass
 ------------------------------------------
 --QUeary for order_Dim--
 /*
-SELECT cust_order.order_id, cust_order.customer_id, cust_order.dest_address_id, shipping_method.method_id, shipping_method.method_name, order_status.status_id, order_status.status_value, order_history.status_date
+SELECT cust_order.order_id, cust_order.customer_id, cust_order.dest_address_id, shipping_method.method_id, shipping_method.method_name, order_status.status_id, 
+order_status.status_value, order_history.status_date
 FROM     cust_order INNER JOIN
                   order_history ON cust_order.order_id = order_history.order_id INNER JOIN
                   order_status ON order_history.status_id = order_status.status_id INNER JOIN
